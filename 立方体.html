@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>05-立方体</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        ul {
+            width: 200px;
+            height: 200px;
+            list-style: none;
+            margin: 150px auto;
+            transform-style: preserve-3d;
+            position: relative;
+            transform: rotateY(30deg) rotateX(-30deg);
+            animation: rotate 8s linear infinite;
+
+        }
+        li {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            line-height: 200px;
+            opacity: 0.6;
+        }
+
+        li:nth-child(1) {
+            background-color: red;
+            transform: translateZ(100px);
+        }
+        li:nth-child(2) {
+            background-color: #1cf7d5;
+            transform: translateZ(-100px);
+        }
+        li:nth-child(3) {
+            background-color: blue;
+            transform: rotateY(90deg) translateZ(-100px);
+        }
+        li:nth-child(4) {
+            background-color: yellow;
+            transform: rotateY(90deg) translateZ(100px);
+        }
+        li:nth-child(5) {
+            background-color: green;
+            transform: rotateX(90deg) translateZ(100px);
+        }
+        li:nth-child(6) {
+            background-color: orange;
+            transform: rotateX(-90deg) translateZ(100px);
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotateX(0deg) rotateY(360deg);
+            }
+
+            to {
+                transform: rotateX(360deg) rotateY(0deg);
+            }
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li>front</li>
+    <li>back</li>
+    <li>left</li>
+    <li>right</li>
+    <li>top</li>
+    <li>bottom</li>
+</ul>
+</body>
+</html>
